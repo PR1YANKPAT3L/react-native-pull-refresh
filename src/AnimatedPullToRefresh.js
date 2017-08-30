@@ -190,6 +190,7 @@ class AnimatedPullToRefresh extends React.Component {
   render() {
     let onScrollEvent = (event) => {
       this.state.scrollY.setValue(event.nativeEvent.contentOffset.y)
+      this.props.onScroll(event)
     };
 
     let animateHeight = this.state.refreshHeight.interpolate({
